@@ -49,6 +49,11 @@ const HeaderStyled = styled.div`
 .bakeit_logo{
     width: 15vw;
 }
+@media (max-width: 375px){
+    .nav-links a{
+        font-size: 0.7em;
+    }
+}
 `
 
 export default Header

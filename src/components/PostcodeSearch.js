@@ -88,6 +88,24 @@ p{
 .search-btn: hover{
     background-color: crimson;
 }
+
+@media (max-width: 375px){
+    .container{
+        padding: 15px;
+    }
+    p{
+        font-size: 1.3em;
+    }
+    .search-input{
+        font-size: 0.7em;
+    }
+    .search-btn{
+        font-size: 0.7em;
+    }
+    .search-input-error{
+        font-size: 0.7em;
+    }
+}
 `
 
 export default PostcodeSearch
