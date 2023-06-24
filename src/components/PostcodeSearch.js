@@ -55,6 +55,7 @@ const PostcodeSearchStyled = styled.div`
     padding: 30px;
     border-radius: 50px;
     background-color: darkred;
+    box-shadow: 0px 1px 12px -1px rgba(0,0,0,0.75);
 }
 p{
     color: white;

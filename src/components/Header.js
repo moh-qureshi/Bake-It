@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Nav, Navbar} from 'react-bootstrap';
-import logo from "../images/bakeit_logo.png"
 import styled from 'styled-components';
 
 const Header = () => {
@@ -8,7 +7,7 @@ const Header = () => {
     <HeaderStyled>
         <Navbar expand="lg" className="navbar">
             <Container>
-                <Navbar.Brand href="/"><img src={logo} alt='bakeit_logo' className='bakeit_logo'/></Navbar.Brand>
+                <Navbar.Brand href="/"><img src="/images/bakeit_logo.png" alt='bakeit_logo' className='bakeit_logo'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='navbar-toggle'/>
                 <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
                 <Nav className='nav-links'>
@@ -48,7 +47,7 @@ const HeaderStyled = styled.div`
 }
 .bakeit_logo{
     width: 15vw;
-}
+}j
 @media (max-width: 375px){
     .nav-links a{
         font-size: 0.7em;
