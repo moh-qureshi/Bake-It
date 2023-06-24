@@ -14,6 +14,8 @@ const PostcodeSearch = () => {
                 type='text' 
                 placeholder='Enter Postcode...' 
                 className='search-input'
+                
+                value={input}
                 onChange={(e) => setInput(e.target.value)}
                 />
                 
@@ -25,8 +27,15 @@ const PostcodeSearch = () => {
                         const result = await fetch(`https://api.postcodes.io/postcodes/` + input) 
                         result.json().then(json => {
                             setLocation(json.result.admin_district)
+                            setInput("")
                         }).catch((error =>{
-                            alert("Please check postcode")
+                            setInput("Please Check Postcode")
+                            const searchbar = document.getElementsByClassName("search-input")[0]
+                            searchbar.className="search-input-error"
+                            searchbar.onclick = () => {
+                                document.getElementsByClassName("search-input-error")[0].className="search-input"
+                                setInput("");
+                            }
                         }))
                     }
                     fetchPostcodeData();
@@ -59,6 +68,14 @@ p{
     padding: 10px;
     width: 50vw;
     margin: 0 10px;
+}
+
+.search-input-error{
+    padding: 10px;
+    width: 50vw;
+    margin: 0 10px;
+    color: red;
+    font-weight: bold;
 }
 .search-input: focus{
     outline: none;
