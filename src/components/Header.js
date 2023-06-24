@@ -42,6 +42,8 @@ const HeaderStyled = styled.div`
     color: darkred;
 }
 .navbar{
+    margin-bottom: 10vh;
+    border-bottom: 2px solid darkred;
     background: linear-gradient(151deg, rgba(255,255,255,1) 3%, rgba(255,238,238,1) 15%, rgba(251,104,104,1) 68%, rgba(255,0,0,1) 100%);
 }
 .bakeit_logo{
