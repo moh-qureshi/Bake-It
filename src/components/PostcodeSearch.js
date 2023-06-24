@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 
 const PostcodeSearch = () => {
+    const [input, setInput] = useState("")
+    const [location, setLocation] = useState("")
   return (
     <PostcodeSearchStyled>
         <div className='container'>
             <p>Find Bakers Near You</p>
             <div className='search-section'>
-                <input type='text' placeholder='Enter Postcode...' className='search-input'/>
-                <Button className='search-btn'>Search</Button>
+                <input 
+                type='text' 
+                placeholder='Enter Postcode...' 
+                className='search-input'
+                onChange={(e) => setInput(e.target.value)}
+                />
+                
+                <Button 
+                className='search-btn'
+                type='submit'
+                onClick={() =>{
+                    const fetchPostcodeData = async() =>{
+                        const result = await fetch(`https://api.postcodes.io/postcodes/` + input) 
+                        result.json().then(json => {
+                            setLocation(json.result.admin_district)
+                        }).catch((error =>{
+                            alert("Please check postcode")
+                        }))
+                    }
+                    fetchPostcodeData();
+                }}
+                >Search</Button>
             </div>
         </div>
     </PostcodeSearchStyled>
