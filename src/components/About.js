@@ -63,31 +63,73 @@ const AboutStyled = styled.div`
 h1{
   font-size: 1.75em;
   font-weight: bold;
+  margin-bottom: 20px;
 }
-
-@media (max-width: 375px){
-.article{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+@media (max-width: 1200px){
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article{
+    width: 950px;
+  }
+  h1{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1.3em;
+  }
 }
-.article-image{
-  height: 15vh;
-  margin: 5px;
-}
-
-h1{
-  font-size: 0.9em;
-}
-p{
-  font-size: 0.7em;
-}
-}
-@media (max-width: 820px){
+@media (max-width: 1024px){
   .article-image{
-    height: 15vh;
-    margin: 5px;
+    height: 40vh;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article{
+    width: 800px;
+  }
+  h1{
+    font-size: 1.8em
+  }
+  p{
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 992px){
+  .article-image{
+    height: 30vh;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article{
+    width: 750px;
+  }
+  h1{
+    font-size: 1.6em;
+  }
+  p{
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 768px){
+  .article-image{
+    height: 35vh;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article{
+    width: 600px;
   }
   h1{
     font-size: 1.3em;
@@ -96,6 +138,70 @@ p{
     font-size: 0.9em;
   }
 }
+@media (max-width: 600px){
+  .article-image{
+    height: 8vh;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 170px;
+    height: 410px;
+    margin: 5px;
+    padding: 10px;
+  }
+  h1{
+    font-size: 0.7em;
+  }
+  p{
+    font-size: 0.5em;
+  }
+  @media (max-width: 425px){
+    .article-image{
+      height: 7vh;
+    }
+    .article{
+      width: 130px;
+      height: 350px;
+    }
+    h1{
+      font-size: 0.6em;
+    }
+    p{
+      font-size: 0.4em;
+    }
+  }
+  @media (max-width: 375px){
+    .article-image{
+      height: 5vh;
+    }
+    .article{
+      height: 350px;
+    }
+    h1{
+      font-size: 0.5em;
+    }
+    p{
+      font-size: 0.37em;
+    }
+  }
+  @media (max-width: 320px){
+    .article{
+      height: 350px;
+    }
+    h1{
+      font-size: 0.45em;
+    }
+    p{
+      font-size: 0.33em;
+    }
+  }
 `
 
 export default About
