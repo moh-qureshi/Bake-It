@@ -193,13 +193,13 @@ h1{
   }
   @media (max-width: 320px){
     .article{
-      height: 350px;
+      height: 310px;
     }
     h1{
       font-size: 0.45em;
     }
     p{
-      font-size: 0.33em;
+      font-size: 0.30em;
     }
   }
 `

@@ -3,6 +3,7 @@ import Header from './Header'
 import PostcodeSearch from './PostcodeSearch'
 import About from './About'
 import styled from 'styled-components'
+import CategoryCards from './CategoryCards'
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
         <Header />
         <PostcodeSearch />
         <About />
+        <CategoryCards />
     </HomeStyled>
   )
 }
