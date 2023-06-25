@@ -10,15 +10,16 @@ const About = () => {
                 <div className='text-section'>
                   <h1>Enjoy Baked Goods Without The Hard Work</h1>
                   <p>Sit back and relax as we bring a variety of sweet dishes and and a wide assortment of cakes and treats to you. Say goodbye to the tiresome baking and the messy kitchen as you order your delicously baked goods to come straight to your doorstep.</p>
+                  <p>You'll be spoilt for choice when you see the amount of bakers in your area, so take a look at the options on offer and discover exciting new tastes and treats available to you!</p>
                 </div>
             </div>
             <div className='article section-two'>
+                <img src="/images/homeimage_two.png" alt="image_two" className="article-image home-image-two"/>
                 <div className='text-section'>
                   <h1>Variety Of Baked Goods To Choose From</h1>
                   <p>With 1000's of baking business on BakeIt, we make it easy for you to choose whatever you are craving. Whether you're in the mood for some succulent chocolate chip cookies, got a craving for some soft gooey brownies or need a refreshing smoothie - we've got it all!</p>
                   <p>For people who suffer from various allergies, we have a huge list of dairy free, nut free and gluten free options to choose from. You could also take a look at our vegetarian, halal and kosher options - so you have no excuses for not satisying your taste buds!</p>
                 </div>
-                <img src="/images/homeimage_two.png" alt="image_two" className="article-image home-image-two"/>
             </div>
             <div className='article section-three'>
                 <img src="/images/homeimage_three.png" alt="image_three" className="article-image home-image-three"/>
@@ -36,33 +37,64 @@ const About = () => {
 
 const AboutStyled = styled.div`
 .container{
+  display: flex;
+  flex-direction: column;
   margin-top: 10vh;
 }
 .article{
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  text-align: left;
+  background-color: white; 
   margin: 30px;
   padding: 20px;
   box-shadow: 0px 1px 12px -1px rgba(0,0,0,0.75);
 }
-.article-image{
-  height: 40vh;
-}
 
+
+.home-image-one, .home-image-three{
+  float: left;
+  height: 40vh;
+  margin: 10px;
+}
+.home-image-two{
+  float: right;
+  height: 40vh;
+  margin: 10px;
+}
 h1{
   font-size: 1.75em;
   font-weight: bold;
 }
 
-
-
-.text-section{
+@media (max-width: 375px){
+.article{
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 10px 20px;
+  align-items: center;
+  text-align: center;
+}
+.article-image{
+  height: 15vh;
+  margin: 5px;
+}
+
+h1{
+  font-size: 0.9em;
+}
+p{
+  font-size: 0.7em;
+}
+}
+@media (max-width: 820px){
+  .article-image{
+    height: 15vh;
+    margin: 5px;
+  }
+  h1{
+    font-size: 1.3em;
+  }
+  p{
+    font-size: 0.9em;
+  }
 }
 `
 
