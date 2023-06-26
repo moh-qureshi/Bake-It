@@ -193,7 +193,7 @@ h1{
   }
   @media (max-width: 320px){
     .article{
-      height: 310px;
+      height: 320px;
     }
     h1{
       font-size: 0.45em;
