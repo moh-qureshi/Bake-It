@@ -4,6 +4,7 @@ import PostcodeSearch from './PostcodeSearch'
 import About from './About'
 import styled from 'styled-components'
 import CategoryCards from './CategoryCards'
+import Footer from './Footer'
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
         <PostcodeSearch />
         <About />
         <CategoryCards />
+        <Footer />
     </HomeStyled>
   )
 }
