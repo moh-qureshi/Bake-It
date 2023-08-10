@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
 import styled from  'styled-components'
 import { ArrowDownSquareFill, XSquareFill } from 'styled-icons/bootstrap'
+
 const Footer = () => {
     const [dropdownShowing, toggleDropdown] = useState('none')
     return (
-    <FooterStyled>
+        <FooterStyled>
             <div className='footer-links-div'>
                 <ul>
-                    <div className='footer-link-title'>Customer Service 
+                    <div className='footer-link-title' 
+                    onClick={() =>{
+                        { dropdownShowing === 'none'? (
+                            toggleDropdown('customer service')
+                            ) : (
+                            toggleDropdown('none')
+                          )}
+                    }}
+                    >
+                    Customer Service 
                     <ArrowDownSquareFill 
-                    className={`dropdown-icon ${dropdownShowing === "customer service"? 'hide': 'show'}`}
-                    onClick={() =>{toggleDropdown('customer service')}}
+                    className={`dropdown-icon ${dropdownShowing === 'customer service'? 'hide': 'show'}`}
                     />
                     <XSquareFill 
                     className={`cancel-dropdown-icon ${dropdownShowing === 'customer service'? 'show': 'hide'}`}
-                    onClick={() =>{toggleDropdown('none')}}
                     />
                     </div>
                     <hr className={`dropdown-closed-divider ${dropdownShowing === 'customer service'? 'hide': 'show'}`}></hr>
@@ -30,14 +38,21 @@ const Footer = () => {
             <hr className={`dropdown-open-divider ${dropdownShowing === 'customer service'? 'show': 'hide'}`}></hr>
             <div className='footer-links-div'>
                 <ul>
-                    <div className='footer-link-title'>Popular Categories 
+                    <div className='footer-link-title'
+                      onClick={() =>{
+                        { dropdownShowing === 'none'? (
+                            toggleDropdown('popular categories')
+                            ) : (
+                            toggleDropdown('none')
+                          )}
+                    }}
+                    >
+                    Popular Categories 
                     <ArrowDownSquareFill 
                     className={`dropdown-icon ${dropdownShowing === 'popular categories'? 'hide': 'show'}`}
-                    onClick={() =>{toggleDropdown('popular categories')}}
                     />
                     <XSquareFill 
                     className={`cancel-dropdown-icon ${dropdownShowing === 'popular categories'? 'show': 'hide'}`}
-                    onClick={() =>{toggleDropdown('none')}}
                     />
                     </div>
                     <hr className={`dropdown-closed-divider ${dropdownShowing === 'popular categories'? 'hide': 'show'}`}></hr>
@@ -53,14 +68,20 @@ const Footer = () => {
             </div>
             <div className='footer-links-div'>
                 <ul>
-                    <div className='footer-link-title'>Popular Locations 
+                    <div className='footer-link-title'
+                      onClick={() =>{
+                        { dropdownShowing === 'none'? (
+                            toggleDropdown('popular locations')
+                            ) : (
+                            toggleDropdown('none')
+                          )}
+                    }}>
+                    Popular Locations 
                     <ArrowDownSquareFill 
                     className={`dropdown-icon ${dropdownShowing === 'popular locations'? 'hide': 'show'}`}
-                    onClick={() =>{toggleDropdown('popular locations')}}
                     />
                     <XSquareFill 
                     className={`cancel-dropdown-icon ${dropdownShowing === 'popular locations'? 'show': 'hide'}`}
-                    onClick={() =>{toggleDropdown('none')}}
                     />
                     </div>
                     <hr className={`dropdown-closed-divider ${dropdownShowing === 'popular locations'? 'hide': 'show'}`}></hr>
@@ -76,10 +97,18 @@ const Footer = () => {
             </div>
             <div className='footer-links-div'>
                 <ul>
-                    <div className='footer-link-title'>About BakeIt 
+                    <div className='footer-link-title'
+                      onClick={() =>{
+                        { dropdownShowing === 'none'? (
+                            toggleDropdown('about BakeIt')
+                            ) : (
+                            toggleDropdown('none')
+                          )}
+                    }}
+                    >
+                    About BakeIt 
                     <ArrowDownSquareFill 
                     className={`dropdown-icon ${dropdownShowing === 'about BakeIt'? 'hide': 'show'}`}
-                    onClick={() =>{toggleDropdown('about BakeIt')}}
                     />
                     <XSquareFill 
                     className={`cancel-dropdown-icon ${dropdownShowing === 'about BakeIt'? 'show': 'hide'}`}
@@ -142,6 +171,7 @@ padding: 20px;
     .footer-link-title{
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
     }
     .dropdown-icon{
         margin-left: 40px;
