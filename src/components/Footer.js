@@ -160,6 +160,7 @@ padding: 20px;
 .dropdown-icon, .cancel-dropdown-icon{
     height: 1.2em;
     display: none;
+    padding-right: 20px;
 }
 .dropdown-closed-divider, .dropdown-open-divider{
     display: none;
@@ -167,7 +168,7 @@ padding: 20px;
 
 @media (max-width: 768px){
     flex-direction: column;
-   
+    
     .footer-link-title{
         display: flex;
         justify-content: space-between;
